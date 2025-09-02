@@ -371,12 +371,39 @@ Sidebar
 Hero
 ===============
 */
-dl {
+#hi, #me, #webdev {
   font-size: 4rem;
   font-weight: 900;
   letter-spacing: 0.25rem;
-  display: none;
   color: white;
+}
+
+.fade-in-hi{
+  opacity: 0;
+  animation: fade-in 0.5s ease-in forwards;
+  animation-delay: 0.5s;
+}
+@keyframes fade-in {
+  from {opacity: 0;}
+  to { opacity: 1; }
+}
+.fade-in-me{
+  opacity: 0;
+  animation: fade-in 0.7s ease-in forwards;
+  animation-delay: 0.7s;
+}
+@keyframes fade-in {
+  from {opacity: 0;}
+  to { opacity: 1; }
+}
+.fade-in-webdev{
+  opacity: 0;
+  animation: fade-in 0.9s ease-in forwards;
+  animation-delay: 0.9s;
+}
+@keyframes fade-in {
+  from {opacity: 0;}
+  to { opacity: 1; }
 }
 
 @keyframes move-twink-back {
@@ -474,7 +501,7 @@ dl {
 }
 
 @media screen and (max-width: 350px) {
-  dl {
+  span {
     font-size: 3rem;
     font-weight: 800;
     letter-spacing: 0.20rem;

@@ -7,13 +7,9 @@ const closeBtn = document.querySelector("#close-btn");
 const sidebar = document.querySelector("#sidebar");
 const date = document.querySelector("#date");
 const closeSidebar = document.querySelector(".closeSidebar");
-const closeSidebar1 = document.querySelector(".closeSidebar1")
 const closeSidebar2 = document.querySelector(".closeSidebar2")
 
 closeSidebar.addEventListener("click", function(){
-  sidebar.classList.remove("show-sidebar");
-})
-closeSidebar1.addEventListener("click", function(){
   sidebar.classList.remove("show-sidebar");
 })
 closeSidebar2.addEventListener("click", function(){
@@ -35,15 +31,8 @@ navBtn.addEventListener("click", ()=> {
 closeBtn.addEventListener("click", ()=> {
   sidebar.classList.remove("show-sidebar");
 });
-// set year
+
 date.innerHTML = new Date().getFullYear();
-
-//Intro fade in
-
-$("#hi").fadeIn(3000);
-$("#comma").fadeIn(6000);
-$("#me").fadeIn(7000);
-$("#webdev").fadeIn(8000);
 });
 
 function copyToClipboard() {
