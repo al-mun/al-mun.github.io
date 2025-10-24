@@ -1,13 +1,25 @@
 
+const date = document.querySelector("#date");
+
 function navBar(){
 
 const navbar = document.querySelector("#nav");
 const navBtn = document.querySelector("#nav-btn");
 const closeBtn = document.querySelector("#close-btn");
 const sidebar = document.querySelector("#sidebar");
-const date = document.querySelector("#date");
 const closeSidebar = document.querySelector(".closeSidebar");
 const closeSidebar2 = document.querySelector(".closeSidebar2")
+
+  if (!navBtn || !sidebar || !navbar) return; // nothing to do if core elements are missing
+
+
+// show sidebar
+navBtn.addEventListener("click", ()=> {
+  sidebar.classList.add("show-sidebar");
+});
+closeBtn.addEventListener("click", ()=> {
+  sidebar.classList.remove("show-sidebar");
+});
 
 closeSidebar.addEventListener("click", function(){
   sidebar.classList.remove("show-sidebar");
@@ -24,16 +36,10 @@ window.addEventListener("scroll",  ()=>{
     navbar.classList.remove("navbar-fixed");
   }
 });
-// show sidebar
-navBtn.addEventListener("click", ()=> {
-  sidebar.classList.add("show-sidebar");
-});
-closeBtn.addEventListener("click", ()=> {
-  sidebar.classList.remove("show-sidebar");
-});
+
+};
 
 date.innerHTML = new Date().getFullYear();
-};
 
 function copyToClipboard() {
   const copyText = document.getElementById("copyText").innerText;
@@ -51,3 +57,4 @@ function copyToClipboard() {
     });
 }
 
+window.addEventListener('DOMContentLoaded', navBar);

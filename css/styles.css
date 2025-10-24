@@ -864,7 +864,6 @@ Projects Page
   text-transform: capitalize;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  -ms-grid-column-align: end;
   justify-self: end;
 }
 
