@@ -1,5 +1,5 @@
 
-$(document).ready(function(){
+function navBar(){
 
 const navbar = document.querySelector("#nav");
 const navBtn = document.querySelector("#nav-btn");
@@ -33,19 +33,11 @@ closeBtn.addEventListener("click", ()=> {
 });
 
 date.innerHTML = new Date().getFullYear();
-});
+};
 
 function copyToClipboard() {
-  var copyText = document.getElementById("copyText").innerText;
-  navigator.clipboard.writeText(copyText)
-    .catch(err => {
-      console.error('Unable to copy to clipboard', err);
-    });
-}
-
-function copyToClipboard() {
-  var copyText = document.getElementById("copyText").innerText;
-  var copyNotification = document.getElementById("copyNotification");
+  const copyText = document.getElementById("copyText").innerText;
+  const copyNotification = document.getElementById("copyNotification");
 
   navigator.clipboard.writeText(copyText)
     .then(() => {
